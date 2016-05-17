@@ -86,11 +86,9 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
     
     
     /* This function is called upon clicking find location button. It passes location string to geocode
-     and authenticate valid address and throws if invalid address is entered. */
+     and authenticate valid address and throws error if invalid address is entered. */
     
     @IBAction func findLocationButton(sender: UIButton) {
-        
-        setUIEnabled(false)
         
         guard !locationTextField.text!.isEmpty else{
             showAlertDialog("", message: "Please enter a location")
@@ -99,6 +97,8 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
         
         mapString = locationTextField.text!
         let geocoder = CLGeocoder()
+        
+        setUIEnabled(false)
         
         geocoder.geocodeAddressString(mapString!, completionHandler: {(placemarks, error) -> Void in
             
