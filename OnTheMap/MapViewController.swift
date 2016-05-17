@@ -16,7 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AddLocationDelegat
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    // Computed property that returns array of Student locations stored in model class MapClient
+    // Computed property that returns array of Student locations stored in model class Locations
     
     var locations: [StudentInformation]? {
         return Locations.sharedInstance.studentLocations

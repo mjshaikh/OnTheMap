@@ -15,7 +15,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    // Computed property that returns array of Student location stored in model class MapClient
+    // Computed property that returns array of Student location stored in model class Locations
     
     var locations: [StudentInformation] {
         return Locations.sharedInstance.studentLocations!

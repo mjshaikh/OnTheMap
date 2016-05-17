@@ -105,6 +105,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
             // If valid address, move on else throw error dialog
             guard (error == nil) else{
                 self.showAlertDialog("Invalid Address", message: "Could not geocode the address")
+                self.setUIEnabled(true)
                 return
             }
             
@@ -161,6 +162,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
                             
                         else{   // Throw error dialog
                             self.showAlertDialog("Edit Location", message: error!.localizedDescription)
+                            self.setUIEnabled(true)
                         }
                     }
                 }
@@ -199,6 +201,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
                             
                         else{   // throw error dialog if POSTing failed
                             self.showAlertDialog("Post Location", message: error!.localizedDescription)
+                            self.setUIEnabled(true)
                         }
                         
                     }
