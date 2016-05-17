@@ -8,13 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2D153BA61C73D28900CB95D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BA51C73D28900CB95D7 /* AppDelegate.swift */; };
-		2D153BA81C73D28900CB95D7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BA71C73D28900CB95D7 /* FirstViewController.swift */; };
-		2D153BAA1C73D28900CB95D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BA91C73D28900CB95D7 /* SecondViewController.swift */; };
+		2D153BA81C73D28900CB95D7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BA71C73D28900CB95D7 /* MapViewController.swift */; };
+		2D153BAA1C73D28900CB95D7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BA91C73D28900CB95D7 /* TableViewController.swift */; };
 		2D153BAD1C73D28900CB95D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D153BAB1C73D28900CB95D7 /* Main.storyboard */; };
 		2D153BAF1C73D28900CB95D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D153BAE1C73D28900CB95D7 /* Assets.xcassets */; };
 		2D153BB21C73D28900CB95D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D153BB01C73D28900CB95D7 /* LaunchScreen.storyboard */; };
 		2D153BBD1C73D28900CB95D7 /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BBC1C73D28900CB95D7 /* OnTheMapTests.swift */; };
 		2D153BC81C73D28900CB95D7 /* OnTheMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BC71C73D28900CB95D7 /* OnTheMapUITests.swift */; };
+		2D153BD81C7C179C00CB95D7 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BD71C7C179C00CB95D7 /* StudentInformation.swift */; };
+		2D153BDA1C7C3C0300CB95D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BD91C7C3C0300CB95D7 /* Constants.swift */; };
+		2D153BDC1C86EE1800CB95D7 /* MapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D153BDB1C86EE1800CB95D7 /* MapClient.swift */; };
+		2D3FBF0E1CD2B27C004AD75B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3FBF0D1CD2B27C004AD75B /* LoginViewController.swift */; };
+		2D3FBF121CD553BA004AD75B /* MapConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3FBF111CD553BA004AD75B /* MapConvenience.swift */; };
+		2D3FBF141CD5636E004AD75B /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3FBF131CD5636E004AD75B /* GCDBlackBox.swift */; };
+		2D3FBF161CD82E08004AD75B /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3FBF151CD82E08004AD75B /* AddLocationViewController.swift */; };
+		2D3FBF181CDC648F004AD75B /* AddLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3FBF171CDC648F004AD75B /* AddLocationDelegate.swift */; };
+		2D3FBF291CE19C24004AD75B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3FBF271CE19C24004AD75B /* FBSDKCoreKit.framework */; };
+		2D3FBF2A1CE19C24004AD75B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3FBF281CE19C24004AD75B /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +47,8 @@
 /* Begin PBXFileReference section */
 		2D153BA21C73D28800CB95D7 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D153BA51C73D28900CB95D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D153BA71C73D28900CB95D7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2D153BA91C73D28900CB95D7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2D153BA71C73D28900CB95D7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = OnTheMap/MapViewController.swift; sourceTree = "<group>"; };
+		2D153BA91C73D28900CB95D7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = OnTheMap/TableViewController.swift; sourceTree = "<group>"; };
 		2D153BAC1C73D28900CB95D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D153BAE1C73D28900CB95D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D153BB11C73D28900CB95D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,16 @@
 		2D153BC31C73D28900CB95D7 /* OnTheMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D153BC71C73D28900CB95D7 /* OnTheMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapUITests.swift; sourceTree = "<group>"; };
 		2D153BC91C73D28900CB95D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D153BD71C7C179C00CB95D7 /* StudentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		2D153BD91C7C3C0300CB95D7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2D153BDB1C86EE1800CB95D7 /* MapClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapClient.swift; sourceTree = "<group>"; };
+		2D3FBF0D1CD2B27C004AD75B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = OnTheMap/LoginViewController.swift; sourceTree = "<group>"; };
+		2D3FBF111CD553BA004AD75B /* MapConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapConvenience.swift; sourceTree = "<group>"; };
+		2D3FBF131CD5636E004AD75B /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = SOURCE_ROOT; };
+		2D3FBF151CD82E08004AD75B /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddLocationViewController.swift; path = OnTheMap/AddLocationViewController.swift; sourceTree = "<group>"; };
+		2D3FBF171CDC648F004AD75B /* AddLocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationDelegate.swift; sourceTree = "<group>"; };
+		2D3FBF271CE19C24004AD75B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		2D3FBF281CE19C24004AD75B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3FBF2A1CE19C24004AD75B /* FBSDKLoginKit.framework in Frameworks */,
+				2D3FBF291CE19C24004AD75B /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +122,15 @@
 			isa = PBXGroup;
 			children = (
 				2D153BA51C73D28900CB95D7 /* AppDelegate.swift */,
-				2D153BA71C73D28900CB95D7 /* FirstViewController.swift */,
-				2D153BA91C73D28900CB95D7 /* SecondViewController.swift */,
+				2D3FBF131CD5636E004AD75B /* GCDBlackBox.swift */,
+				2D3FBF171CDC648F004AD75B /* AddLocationDelegate.swift */,
 				2D153BAB1C73D28900CB95D7 /* Main.storyboard */,
 				2D153BAE1C73D28900CB95D7 /* Assets.xcassets */,
 				2D153BB01C73D28900CB95D7 /* LaunchScreen.storyboard */,
 				2D153BB31C73D28900CB95D7 /* Info.plist */,
+				2D153BD51C741BF500CB95D7 /* Model */,
+				2D153BD61C741BFE00CB95D7 /* Controller */,
+				2D3FBF261CE19C19004AD75B /* Frameworks */,
 			);
 			path = OnTheMap;
 			sourceTree = "<group>";
@@ -126,6 +151,39 @@
 				2D153BC91C73D28900CB95D7 /* Info.plist */,
 			);
 			path = OnTheMapUITests;
+			sourceTree = "<group>";
+		};
+		2D153BD51C741BF500CB95D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D153BD71C7C179C00CB95D7 /* StudentInformation.swift */,
+				2D153BD91C7C3C0300CB95D7 /* Constants.swift */,
+				2D153BDB1C86EE1800CB95D7 /* MapClient.swift */,
+				2D3FBF111CD553BA004AD75B /* MapConvenience.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2D153BD61C741BFE00CB95D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D153BA71C73D28900CB95D7 /* MapViewController.swift */,
+				2D153BA91C73D28900CB95D7 /* TableViewController.swift */,
+				2D3FBF0D1CD2B27C004AD75B /* LoginViewController.swift */,
+				2D3FBF151CD82E08004AD75B /* AddLocationViewController.swift */,
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2D3FBF261CE19C19004AD75B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D3FBF271CE19C24004AD75B /* FBSDKCoreKit.framework */,
+				2D3FBF281CE19C24004AD75B /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +248,7 @@
 		2D153B9A1C73D28800CB95D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mohammed Javeed Shaikh";
 				TargetAttributes = {
@@ -262,9 +320,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D153BAA1C73D28900CB95D7 /* SecondViewController.swift in Sources */,
+				2D3FBF0E1CD2B27C004AD75B /* LoginViewController.swift in Sources */,
+				2D3FBF181CDC648F004AD75B /* AddLocationDelegate.swift in Sources */,
+				2D153BDA1C7C3C0300CB95D7 /* Constants.swift in Sources */,
+				2D3FBF121CD553BA004AD75B /* MapConvenience.swift in Sources */,
+				2D153BDC1C86EE1800CB95D7 /* MapClient.swift in Sources */,
+				2D153BD81C7C179C00CB95D7 /* StudentInformation.swift in Sources */,
+				2D153BAA1C73D28900CB95D7 /* TableViewController.swift in Sources */,
 				2D153BA61C73D28900CB95D7 /* AppDelegate.swift in Sources */,
-				2D153BA81C73D28900CB95D7 /* FirstViewController.swift in Sources */,
+				2D3FBF161CD82E08004AD75B /* AddLocationViewController.swift in Sources */,
+				2D3FBF141CD5636E004AD75B /* GCDBlackBox.swift in Sources */,
+				2D153BA81C73D28900CB95D7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,10 +472,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnTheMap",
+				);
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zaytunlab.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -417,6 +489,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnTheMap",
+				);
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zaytunlab.OnTheMap;
@@ -491,6 +568,7 @@
 				2D153BCE1C73D28900CB95D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D153BCF1C73D28900CB95D7 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +577,7 @@
 				2D153BD11C73D28900CB95D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D153BD21C73D28900CB95D7 /* Build configuration list for PBXNativeTarget "OnTheMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +586,7 @@
 				2D153BD41C73D28900CB95D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
