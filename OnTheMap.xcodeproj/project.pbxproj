@@ -25,6 +25,7 @@
 		2D3FBF181CDC648F004AD75B /* AddLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3FBF171CDC648F004AD75B /* AddLocationDelegate.swift */; };
 		2D3FBF291CE19C24004AD75B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3FBF271CE19C24004AD75B /* FBSDKCoreKit.framework */; };
 		2D3FBF2A1CE19C24004AD75B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3FBF281CE19C24004AD75B /* FBSDKLoginKit.framework */; };
+		2D55B1A81CEADF0F00EB6EE2 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D55B1A71CEADF0F00EB6EE2 /* Locations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		2D3FBF171CDC648F004AD75B /* AddLocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationDelegate.swift; sourceTree = "<group>"; };
 		2D3FBF271CE19C24004AD75B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		2D3FBF281CE19C24004AD75B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2D55B1A71CEADF0F00EB6EE2 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				2D153BD91C7C3C0300CB95D7 /* Constants.swift */,
 				2D153BDB1C86EE1800CB95D7 /* MapClient.swift */,
 				2D3FBF111CD553BA004AD75B /* MapConvenience.swift */,
+				2D55B1A71CEADF0F00EB6EE2 /* Locations.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -326,6 +329,7 @@
 				2D3FBF121CD553BA004AD75B /* MapConvenience.swift in Sources */,
 				2D153BDC1C86EE1800CB95D7 /* MapClient.swift in Sources */,
 				2D153BD81C7C179C00CB95D7 /* StudentInformation.swift in Sources */,
+				2D55B1A81CEADF0F00EB6EE2 /* Locations.swift in Sources */,
 				2D153BAA1C73D28900CB95D7 /* TableViewController.swift in Sources */,
 				2D153BA61C73D28900CB95D7 /* AppDelegate.swift in Sources */,
 				2D3FBF161CD82E08004AD75B /* AddLocationViewController.swift in Sources */,

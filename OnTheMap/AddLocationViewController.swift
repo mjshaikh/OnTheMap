@@ -96,6 +96,8 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
     
     @IBAction func findLocationButton(sender: UIButton) {
         
+        setUIEnabled(false)
+        
         guard !locationTextField.text!.isEmpty else{
             showAlertDialog("", message: "Please enter a location")
             return
@@ -112,6 +114,8 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
                 return
             }
             
+            self.setUIEnabled(true)
+            
             // build annotation object and add it to the Map
             if let placemark = placemarks?.first {
                 self.coordinate = placemark.location!.coordinate
@@ -122,6 +126,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
             }
             
             // Once valid address is annoted on map change UI to POST location interface
+            
             self.toggleUIVisibilty(intialize: false)
         })
         
@@ -148,7 +153,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
                 
                 setUIEnabled(false)
                 
-                MapClient.sharedInstance().putStudentLocation(mapString!, mediaURL: url.absoluteString, latitude: coordinate.latitude, longitude: coordinate.longitude){ (success, updateStamp, error) in
+                MapClient.sharedInstance.putStudentLocation(mapString!, mediaURL: url.absoluteString, latitude: coordinate.latitude, longitude: coordinate.longitude){ (success, updateStamp, error) in
                     
                     performUIUpdatesOnMain {
                         
@@ -169,7 +174,7 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
                 
             else{   // If we are creating new location call POST method
                 setUIEnabled(false)
-                MapClient.sharedInstance().postStudentLocation(mapString!, mediaURL: url.absoluteString, latitude: coordinate.latitude, longitude: coordinate.longitude){ (success, objectID, error) in
+                MapClient.sharedInstance.postStudentLocation(mapString!, mediaURL: url.absoluteString, latitude: coordinate.latitude, longitude: coordinate.longitude){ (success, objectID, error) in
                     
                     performUIUpdatesOnMain {
                         
@@ -178,9 +183,9 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
                             /* If sucessful, create a dict with all student info values and build StudentInformation struct
                                and store it in Model class MapClient for later access. */
                             
-                            let studentInformation: [String:AnyObject] = [MapClient.Parse.JSONResponseKeys.UniqueKey : MapClient.sharedInstance().userID!,
-                                MapClient.Parse.JSONResponseKeys.FirstName : MapClient.sharedInstance().firstName!,
-                                MapClient.Parse.JSONResponseKeys.LastName : MapClient.sharedInstance().lastName!,
+                            let studentInformation: [String:AnyObject] = [MapClient.Parse.JSONResponseKeys.UniqueKey : MapClient.sharedInstance.userID!,
+                                MapClient.Parse.JSONResponseKeys.FirstName : MapClient.sharedInstance.firstName!,
+                                MapClient.Parse.JSONResponseKeys.LastName : MapClient.sharedInstance.lastName!,
                                 MapClient.Parse.JSONResponseKeys.MapString : self.mapString!,
                                 MapClient.Parse.JSONResponseKeys.MediaURL : url.absoluteString,
                                 MapClient.Parse.JSONResponseKeys.Latitude : coordinate.latitude,
@@ -188,8 +193,8 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
                                 MapClient.Parse.JSONResponseKeys.ObjectID : objectID!]
                             
                             
-                            MapClient.sharedInstance().userData = StudentInformation(dictionary: studentInformation)
-                            print("User Data \(MapClient.sharedInstance().userData.debugDescription)")
+                            MapClient.sharedInstance.userData = StudentInformation(dictionary: studentInformation)
+                            print("User Data \(MapClient.sharedInstance.userData.debugDescription)")
                             
                             self.setUIEnabled(true)
                             

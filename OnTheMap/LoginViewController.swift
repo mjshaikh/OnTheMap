@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         } else { // Else disable UI and authenticate user
             setUIEnabled(false)
             
-            MapClient.sharedInstance().authenticateUser(usernameTextField.text!, password: passwordTextField.text!) { (success, errorString) in
+            MapClient.sharedInstance.authenticateUser(usernameTextField.text!, password: passwordTextField.text!) { (success, errorString) in
                 
                 performUIUpdatesOnMain {
                     if success { // If sucessful then complete login
@@ -105,15 +105,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             
             let access_token = FBSDKAccessToken.currentAccessToken().tokenString
             
-            MapClient.sharedInstance().postToCreateSessionFacebook(access_token)
+            MapClient.sharedInstance.postToCreateSessionFacebook(access_token)
             { (success, userID, error) in
                 
                 // If sucessful, store the userID and fetch user account info
                 
                 if success {
-                    MapClient.sharedInstance().userID = userID
+                    MapClient.sharedInstance.userID = userID
                     
-                    MapClient.sharedInstance().fetchAccountInfo(userID!){ (success, errorString) in
+                    MapClient.sharedInstance.fetchAccountInfo(userID!){ (success, errorString) in
                         
                         performUIUpdatesOnMain {
                             if success {

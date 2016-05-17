@@ -19,7 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AddLocationDelegat
     // Computed property that returns array of Student locations stored in model class MapClient
     
     var locations: [StudentInformation]? {
-        return MapClient.sharedInstance().studentLocations
+        return Locations.sharedInstance.studentLocations
     }
     
     
@@ -61,7 +61,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AddLocationDelegat
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         else { // Otherwise call the convenience method to DELETE the session
-            MapClient.sharedInstance().deleteSession(){ (results, error) in
+            MapClient.sharedInstance.deleteSession(){ (results, error) in
                 
                 guard (error == nil) else{
                     print(error)
@@ -81,7 +81,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, AddLocationDelegat
     @IBAction func postLocationButton(sender: UIBarButtonItem) {
         
         // If the user don't have location data then we POST it as new location
-        if MapClient.sharedInstance().userData == nil {
+        if MapClient.sharedInstance.userData == nil {
             
             showAddLocationViewController(editLocation: false)
         }
@@ -121,13 +121,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, AddLocationDelegat
         
         setUIEnabled(false)
         
-        MapClient.sharedInstance().getStudentLocations(){ (locations, error) in
+        MapClient.sharedInstance.getStudentLocations(){ (locations, error) in
             
             performUIUpdatesOnMain{
                 
                 if let locations = locations {      // If we have downloaded an array of locations
                     print("Total locations : \(locations.count)")
-                    MapClient.sharedInstance().studentLocations = locations
+                    Locations.sharedInstance.studentLocations = locations
                     self.addAnnotationToMap(locations)
                     self.setUIEnabled(true)
                 } else {    // There was an error

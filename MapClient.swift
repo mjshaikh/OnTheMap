@@ -24,12 +24,14 @@ class MapClient: NSObject {
     
     // Struct to store student information
     var userData : StudentInformation? = nil
+
+    // MARK: One line Singleton shared instance
     
-    // Array to store locations of all the students
-    var studentLocations: [StudentInformation]? = nil
+    static let sharedInstance = MapClient()
+    
     
     // MARK: Initializers
-    override init() {
+    private override init() {
         super.init()
     }
     
@@ -321,15 +323,6 @@ class MapClient: NSObject {
         }
         
         return components.URL!
-    }
-    
-    // MARK: Shared Instance
-    
-    class func sharedInstance() -> MapClient {
-        struct Singleton {
-            static var sharedInstance = MapClient()
-        }
-        return Singleton.sharedInstance
     }
     
 }

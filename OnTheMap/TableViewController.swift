@@ -18,7 +18,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     // Computed property that returns array of Student location stored in model class MapClient
     
     var locations: [StudentInformation] {
-        return MapClient.sharedInstance().studentLocations!
+        return Locations.sharedInstance.studentLocations!
     }
     
     
@@ -33,7 +33,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         activityIndicator.stopAnimating()
         
         // If student locations array is empty then initiate download
-        if MapClient.sharedInstance().studentLocations == nil {
+        if Locations.sharedInstance.studentLocations == nil {
             downloadLocations()
         }
         else{ // Otherwise just update the tableView data
@@ -58,7 +58,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         else { // Otherwise call the convenience method to DELETE the session
-            MapClient.sharedInstance().deleteSession(){ (results, error) in
+            MapClient.sharedInstance.deleteSession(){ (results, error) in
                 
                 guard (error == nil) else{
                     print(error)
@@ -79,7 +79,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func postLocationButton(sender: UIBarButtonItem) {
         
         // If the user don't have location data then we POST it as new location
-        if MapClient.sharedInstance().userData == nil {
+        if MapClient.sharedInstance.userData == nil {
             showAddLocationViewController(editLocation: false)
         }
         else{ // Otherwise we throw a AlertDialog and UPDATE the location instead
@@ -117,12 +117,12 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func downloadLocations(){
         setUIEnabled(false)
         print("Downloading locations...")
-        MapClient.sharedInstance().getStudentLocations(){ (locations, error) in
+        MapClient.sharedInstance.getStudentLocations(){ (locations, error) in
             
             performUIUpdatesOnMain {
                 if let locations = locations { // If we have downloaded an array of locations
                     print("Total locations : \(locations.count)")
-                    MapClient.sharedInstance().studentLocations = locations
+                    Locations.sharedInstance.studentLocations = locations
                     self.tableView.reloadData()
                     self.setUIEnabled(true)
                 } else {  // There was an error

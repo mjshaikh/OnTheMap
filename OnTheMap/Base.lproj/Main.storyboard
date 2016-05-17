@@ -210,7 +210,7 @@
                                     <outlet property="delegate" destination="cRw-VV-egd" id="SGl-T3-Apx"/>
                                 </connections>
                             </textField>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="0pz-Aq-Zvc">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="0pz-Aq-Zvc">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -218,10 +218,12 @@
                         <constraints>
                             <constraint firstItem="UZS-vY-lYt" firstAttribute="trailing" secondItem="jKe-U0-fFR" secondAttribute="trailing" id="0Cg-lL-8X4"/>
                             <constraint firstItem="EGl-UO-cwF" firstAttribute="leading" secondItem="m6o-bk-bbq" secondAttribute="leading" id="3ZL-LD-kjq"/>
+                            <constraint firstItem="0pz-Aq-Zvc" firstAttribute="centerY" secondItem="m6o-bk-bbq" secondAttribute="centerY" id="5Sd-ki-vKW"/>
                             <constraint firstItem="EGl-UO-cwF" firstAttribute="top" secondItem="Wtn-pH-Bk8" secondAttribute="bottom" constant="-20" id="7jc-BN-GML"/>
                             <constraint firstItem="OiS-XW-LJh" firstAttribute="centerX" secondItem="EGl-UO-cwF" secondAttribute="centerX" id="Ehx-P0-pdZ"/>
                             <constraint firstAttribute="trailing" secondItem="EGl-UO-cwF" secondAttribute="trailing" id="HiF-au-h33"/>
                             <constraint firstItem="jKe-U0-fFR" firstAttribute="leading" secondItem="m6o-bk-bbq" secondAttribute="leading" id="Mja-bD-3bz"/>
+                            <constraint firstItem="0pz-Aq-Zvc" firstAttribute="centerX" secondItem="m6o-bk-bbq" secondAttribute="centerX" id="VyZ-1w-XrD"/>
                             <constraint firstItem="UZS-vY-lYt" firstAttribute="top" secondItem="EGl-UO-cwF" secondAttribute="bottom" id="b80-lX-oea"/>
                             <constraint firstItem="OiS-XW-LJh" firstAttribute="leading" secondItem="m6o-bk-bbq" secondAttribute="leadingMargin" id="d4c-Ry-FP6"/>
                             <constraint firstAttribute="trailing" secondItem="jKe-U0-fFR" secondAttribute="trailing" id="e6L-qY-q1I"/>
@@ -275,14 +277,14 @@
                                                     <rect key="frame" x="52" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="60O-qy-qg3">
                                                     <rect key="frame" x="52" y="25" width="31" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Location" id="soU-GM-S4l">
