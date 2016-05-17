@@ -48,8 +48,8 @@ class MapClient: NSObject {
         
         // If API is Parse we add Parse specific details to request
         if apiName == ApiType.Parse {
-            request.addValue(Parse.AppID, forHTTPHeaderField: "X-Parse-Application-Id")
-            request.addValue(Parse.ApiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
+            request.addValue(Parse.AppID, forHTTPHeaderField: Parse.HTTPHeader.ParseAppId)
+            request.addValue(Parse.ApiKey, forHTTPHeaderField: Parse.HTTPHeader.ParseApiKey)
         }
         
         /* 4. Make the request */
@@ -105,13 +105,13 @@ class MapClient: NSObject {
         
         // If API is Parse we add Parse specific details to request
         if apiName == ApiType.Parse {
-            request.addValue(Parse.AppID, forHTTPHeaderField: "X-Parse-Application-Id")
-            request.addValue(Parse.ApiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue(Parse.AppID, forHTTPHeaderField: Parse.HTTPHeader.ParseAppId)
+            request.addValue(Parse.ApiKey, forHTTPHeaderField: Parse.HTTPHeader.ParseApiKey)
+            request.addValue("application/json", forHTTPHeaderField: Parse.HTTPHeader.ContentType)
         }
         else{   // Otherwise add Udacity specific details to request
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: Udacity.HTTPHeader.Accept)
+            request.addValue("application/json", forHTTPHeaderField: Udacity.HTTPHeader.ContentType)
         }
         
         request.HTTPBody = jsonBody.dataUsingEncoding(NSUTF8StringEncoding)
@@ -176,7 +176,7 @@ class MapClient: NSObject {
             if cookie.name == "XSRF-TOKEN" { xsrfCookie = cookie }
         }
         if let xsrfCookie = xsrfCookie {
-            request.setValue(xsrfCookie.value, forHTTPHeaderField: "X-XSRF-TOKEN")
+            request.setValue(xsrfCookie.value, forHTTPHeaderField: Udacity.HTTPHeader.XsrfToken)
         }
         
         /* 4. Make the request */
@@ -229,9 +229,9 @@ class MapClient: NSObject {
         /* 2/3. Build the URL, Configure the request */
         let request = NSMutableURLRequest(URL: mapUrlFromParameters(apiName, parameters: parameters, withPathExtension: method))
         request.HTTPMethod = "PUT"
-        request.addValue(Parse.AppID, forHTTPHeaderField: "X-Parse-Application-Id")
-        request.addValue(Parse.ApiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(Parse.AppID, forHTTPHeaderField: Parse.HTTPHeader.ParseAppId)
+        request.addValue(Parse.ApiKey, forHTTPHeaderField: Parse.HTTPHeader.ParseApiKey)
+        request.addValue("application/json", forHTTPHeaderField: Parse.HTTPHeader.ContentType)
         
         request.HTTPBody = jsonBody.dataUsingEncoding(NSUTF8StringEncoding)
         

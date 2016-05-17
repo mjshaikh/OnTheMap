@@ -43,12 +43,6 @@ class AddLocationViewController: UIViewController, MKMapViewDelegate, UITextFiel
     var addLocationDelegate: AddLocationDelegate!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
     override func viewWillAppear(animated: Bool) {
         
         // Intialize the UI

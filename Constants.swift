@@ -37,7 +37,13 @@ extension MapClient {
             static let UserID = "id"
         }
         
-        
+        // MARK: HTTP Header Keys
+        struct HTTPHeader {
+            static let Accept = "Accept"
+            static let ContentType = "Content-Type"
+            static let XsrfToken = "X-XSRF-TOKEN"
+        }
+
         // MARK: Response Keys
         struct JSONResponseKeys {
             
@@ -94,6 +100,13 @@ extension MapClient {
             static let limitVal = "100"
             static let orderVal = "-updatedAt"
             static let queryVal = "{\"uniqueKey\":\"{id}\"}"
+        }
+        
+        // MARK: HTTP Header Keys
+        struct HTTPHeader {
+            static let ParseAppId = "X-Parse-Application-Id"
+            static let ParseApiKey = "X-Parse-REST-API-Key"
+            static let ContentType = "Content-Type"
         }
         
         // MARK: Response Keys
