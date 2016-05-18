@@ -99,9 +99,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         
         // Update UI while processing network request
         
-        setUIEnabled(false)
-        
         if result.token != nil {    // If we have a FB access token then continue POST create session method
+            
+            setUIEnabled(false)
             
             let access_token = FBSDKAccessToken.currentAccessToken().tokenString
             
